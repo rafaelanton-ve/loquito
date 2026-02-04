@@ -159,6 +159,39 @@ button {
   }
 }
 
+/* Footer Names */
+.footer-names {
+  margin-top: 25px;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+.footer-names .divider {
+  color: var(--primary-pink);
+  animation: pulse 1.5s infinite ease-in-out;
+  font-size: 1.1rem;
+}
+
+@keyframes pulse {
+
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+
+  50% {
+    transform: scale(1.3);
+    opacity: 1;
+  }
+}
+
 /* Star Styles */
 #stars,
 #stars2,

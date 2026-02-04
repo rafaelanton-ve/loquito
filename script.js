@@ -37,7 +37,7 @@ siBtn.addEventListener('click', () => {
     displayImg.src = imgCorrecto;
     reactionGif.src = gifSi;
     reactionGif.style.display = 'block';
-    questionText.innerHTML = "¡Sabía que dirías que sí! <br> Felices 2 meses mi Loquito ❤️";
+    questionText.innerHTML = "¡Sabía que dirías que sí! <br> Felices 2 meses Mi Loquito ❤️";
     questionText.classList.add('response-text');
     document.getElementById('button-area').style.display = 'none';
 
@@ -54,7 +54,7 @@ siBtn.addEventListener('click', () => {
     // WhatsApp Redirect with delay
     setTimeout(() => {
         const phoneNumber = "584124166770";
-        const message = "he aceptado ser tu novio";
+        const message = "he aceptado ser tu novio ❤✍";
         const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
         window.open(whatsappUrl, '_blank');
     }, 4000); // 4 seconds delay to enjoy the celebration
