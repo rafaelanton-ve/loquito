@@ -38,6 +38,7 @@ siBtn.addEventListener('click', () => {
     reactionGif.src = gifSi;
     reactionGif.style.display = 'block';
     questionText.innerHTML = "¡Sabía que dirías que sí! <br> Felices 2 meses mi Loquito ❤️";
+    questionText.classList.add('response-text');
     document.getElementById('button-area').style.display = 'none';
 
     // Intense celebration
@@ -49,6 +50,14 @@ siBtn.addEventListener('click', () => {
     for (let i = 0; i < 30; i++) {
         setTimeout(createHeart, i * 50);
     }
+
+    // WhatsApp Redirect with delay
+    setTimeout(() => {
+        const phoneNumber = "584124166770";
+        const message = "he aceptado ser tu novio";
+        const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+        window.open(whatsappUrl, '_blank');
+    }, 4000); // 4 seconds delay to enjoy the celebration
 });
 
 // "No" button logic
@@ -57,6 +66,7 @@ noBtn.addEventListener('click', () => {
     reactionGif.src = gifNo;
     reactionGif.style.display = 'block';
     questionText.innerHTML = "¡Respuesta incorrecta! 💔<br>Inténtalo de nuevo...";
+    questionText.classList.add('response-text');
 
     // Disable buttons temporarily during the feedback loop
     siBtn.disabled = true;
@@ -67,6 +77,7 @@ noBtn.addEventListener('click', () => {
         displayImg.src = imgPregunto;
         reactionGif.style.display = 'none';
         questionText.innerHTML = "¿Quieres ser mi novio? ❤️";
+        questionText.classList.remove('response-text');
         siBtn.disabled = false;
         noBtn.disabled = false;
     }, 2000);
