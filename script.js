@@ -117,7 +117,8 @@ function onYouTubeIframeAPIReady() {
             'autoplay': 1,
             'controls': 0,
             'loop': 1,
-            'playlist': 'feA64wXhbjo' // Required for loop to work
+            'playlist': 'feA64wXhbjo', // Required for loop to work
+            'start': 21
         },
         events: {
             'onReady': onPlayerReady
